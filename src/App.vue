@@ -65,5 +65,7 @@ export default {
 body {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
+  max-width: 480px;
+  margin: 0 auto;
 }
 </style>
