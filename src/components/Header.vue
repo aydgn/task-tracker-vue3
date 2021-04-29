@@ -22,6 +22,8 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 2rem;
-  border: 1px solid red;
+  margin: 1rem 0;
+  border-bottom: 1px solid #696969;
+  border-radius: 0.5rem;
 }
 </style>
