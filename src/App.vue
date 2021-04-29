@@ -1,6 +1,10 @@
 <template>
   <Header title="Task Tracker" />
-  <Tasks @delete-task="deleteTask" :tasks="tasks" />
+  <Tasks
+    @toggle-reminder="toggleReminder"
+    @delete-task="deleteTask"
+    :tasks="tasks"
+  />
 </template>
 
 <script>
@@ -23,6 +27,13 @@ export default {
       if (confirm("Silmek istediğinden emin misin?")) {
         this.tasks = this.tasks.filter((task) => task.id !== id);
       }
+    },
+    toggleReminder(id) {
+      /* map ile task.id si emit ile gelen id den farklı olan tasklerin reminderını ters çeviriyoruz.
+        Eğer id si değişmemişse taski aynı şekilde döndürüyoruz.*/
+      this.tasks = this.tasks.map((task) =>
+        task.id === id ? { ...task, reminder: !task.reminder } : task
+      );
     },
   },
   created() {
