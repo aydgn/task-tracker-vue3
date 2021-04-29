@@ -20,7 +20,9 @@ export default {
   },
   methods: {
     deleteTask(id) {
-      this.tasks = this.tasks.filter((task) => task.id !== id);
+      if (confirm("Silmek istediğinden emin misin?")) {
+        this.tasks = this.tasks.filter((task) => task.id !== id);
+      }
     },
   },
   created() {

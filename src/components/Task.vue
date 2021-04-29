@@ -30,6 +30,9 @@ h3 {
   display: flex;
   justify-content: space-between;
 }
+h3 span:hover {
+  cursor: pointer;
+}
 p {
   font-size: 0.75rem;
   font-weight: 100;
