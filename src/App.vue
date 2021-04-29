@@ -1,14 +1,17 @@
 <template>
   <Header title="Task Tracker" />
+  <Tasks :tasks="tasks" />
 </template>
 
 <script>
 import Header from "./components/Header.vue";
+import Tasks from "./components/Tasks.vue";
 
 export default {
   name: "App",
   components: {
     Header,
+    Tasks,
   },
   data() {
     return {
@@ -40,4 +43,9 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+body {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+</style>
